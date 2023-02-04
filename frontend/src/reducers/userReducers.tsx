@@ -26,7 +26,7 @@ import {
     USER_UPDATE_SUCCESS
 } from '../constants/userConstants'
 
-export const userLoginReducer = (state={},action) => {
+export const userLoginReducer = (state={},action:{type:string,payload:any}) => {
     switch(action.type) {
         case USER_LOGIN_REQUEST :
             return {loading : true, }
@@ -42,7 +42,7 @@ export const userLoginReducer = (state={},action) => {
 }
 
 
-export const userRegisterReducer = (state={},action) => {
+export const userRegisterReducer = (state={},action:{type:string,payload:any}) => {
     switch(action.type) {
         case USER_REGISTER_REQUEST :
             return {loading : true, }
@@ -58,7 +58,7 @@ export const userRegisterReducer = (state={},action) => {
 }
 
 
-export const userDetailsReducer = (state={user: {}},action) => {
+export const userDetailsReducer = (state={user: {}},action:{type:string,payload:any}) => {
     switch(action.type) {
         case USER_DETAILS_REQUEST :
             return {...state, loading : true, }
@@ -74,7 +74,7 @@ export const userDetailsReducer = (state={user: {}},action) => {
 }
 
 
-export const userUpdateProfileReducer = (state={},action) => {
+export const userUpdateProfileReducer = (state={},action:{type:string,payload:any}) => {
     switch(action.type) {
         case USER_UPDATE_PROFILE_REQUEST :
             return {loading : true, }
@@ -88,7 +88,7 @@ export const userUpdateProfileReducer = (state={},action) => {
         }
 }
 
-export const userListReducer = (state={users : []},action) => {
+export const userListReducer = (state={users : []},action:{type:string,payload:any}) => {
     switch(action.type) {
         case USER_LIST_REQUEST :
             return {loading : true, }
@@ -102,7 +102,7 @@ export const userListReducer = (state={users : []},action) => {
         }
 }
 
-export const userDeleteReducer = (state={},action) => {
+export const userDeleteReducer = (state={},action:{type:string,payload:any}) => {
     switch(action.type) {
         case USER_DELETE_REQUEST :
             return {loading : true, }
@@ -115,7 +115,7 @@ export const userDeleteReducer = (state={},action) => {
         }
 }
 
-export const userUpdateReducer = (state={user : {}},action) => {
+export const userUpdateReducer = (state={user : {}},action:{type:string,payload:any}) => {
     switch(action.type) {
         case USER_UPDATE_REQUEST :
             return {loading : true, }
