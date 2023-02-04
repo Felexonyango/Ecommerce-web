@@ -1,11 +1,28 @@
 import{CART_ADD_ITEM,CART_REMOVE_ITEM,CART_SAVE_SHIPPING_ADRESSE,CART_SAVE_PAYMENT} from '../constants/cartConstants'
-export const cartReducer = (state = {cartItems:  [],shippingAddress: {} , images: []}, action) =>{
+
+
+interface  CartState {
+    cartItems: any[]
+    shippingAddress: {};
+    images: any[]
+    paymentMethod?:{}
+    }
+
+
+    const initialState: CartState = {
+        cartItems: [],
+        shippingAddress: {},
+        images: [],
+        paymentMethod:{}
+        };
+
+export const cartReducer = (state = initialState, action:{type:string,payload:any}) =>{
     switch(action.type) {
         case CART_ADD_ITEM:
 
         const item = action.payload
 
-        // x.prosuct it's the ID
+    
         const existItem = state.cartItems.find(x=> x.product === item.product)
         if(existItem){
             return{

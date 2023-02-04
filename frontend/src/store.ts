@@ -32,16 +32,29 @@ const reducer = combineReducers({
 
 })
 
-const cartItemsFromStorage = localStorage.getItem('cartItems') ? JSON.parse
-(localStorage.getItem('cartItems')) : []
+const cartItemsFromStorage = localStorage.getItem('cartItems') ? JSON.parse(localStorage.getItem('cartItems')!) : []
 const shippingAddressFromStorage = localStorage.getItem('shippingAddress') ? JSON.parse
-(localStorage.getItem('shippingAddress')) : {}
+(localStorage.getItem('shippingAddress')!) : {}
 const userInfoFromStorage = localStorage.getItem('userInfo') ? JSON.parse
-(localStorage.getItem('userInfo')) : null
+(localStorage.getItem('userInfo')!) :null
+
+
+ 
 
 const initialState = {
-    cart :{cartItems: cartItemsFromStorage ,shippingAddress: shippingAddressFromStorage},
-    userLogin: { userInfo : userInfoFromStorage },
+    cart :{
+        cartItems: cartItemsFromStorage ,
+        shippingAddress: shippingAddressFromStorage,
+        images: [],
+        paymentMethod: {},
+    
+    },
+    
+        
+    userLogin: { 
+        userInfo : userInfoFromStorage 
+    },
+
 }
 
 const middelware = [thunk]
