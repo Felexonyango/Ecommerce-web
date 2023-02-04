@@ -11,7 +11,7 @@ import connectDB from './config/db.js'
 dotenv.config()
 connectDB()
 
-const importData = async () => {
+ export const importData = async () => {
     try {
         // empty all models 
        await Order.deleteMany()
@@ -34,7 +34,7 @@ const importData = async () => {
         process.exit(1)
     }
 }
-const destroyData = async () => {
+ export const destroyData = async () => {
     try {
         // empty all models 
        await Order.deleteMany()

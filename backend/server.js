@@ -12,7 +12,11 @@ import { notFound, errorHandler } from "./middleware/errorMiddleware.js";
 dotenv.config();
 
 connectDB();
+destroyData()
 
+
+
+  import { destroyData, importData } from "./seeder.js";
 const app = express();
 
 if (process.env.NODE_ENV === "developement") {

@@ -5,7 +5,7 @@ import colors from 'colors'
 const connectDB = async () => {
     try{
        
-        const conn = await mongose.connect("mongodb+srv://DevConnector:DevConnector@cluster0.p8gpj.mongodb.net/myFirstDatabase?retryWrites=true",{
+        const conn = await mongose.connect("mongodb://127.0.0.1:27017/ecommerce",{
             useUnifiedTopology: true,
             useNewUrlParser: true,
             useCreateIndex: true

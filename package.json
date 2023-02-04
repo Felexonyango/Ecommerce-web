@@ -104,7 +104,7 @@
     "yaml": "^1.10.0"
   },
   "scripts": {
-    "start": "node backend/server",
+    "start": "nodemon backend/server",
     "server": "nodemon backend/server",
     "client": "npm start --prefix frontend",
     "dev": "concurrently \"npm run server\" \"npm run client\" ",
@@ -114,5 +114,8 @@
   },
   "author": " ABDESSAMAD BOURHJOUL & SOUHAIL OUABOU & SOUFIAN ZAAM",
   "license": "MIT",
-  "description": "MERN shopping cart app"
+  "description": "MERN shopping cart app",
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
 }
