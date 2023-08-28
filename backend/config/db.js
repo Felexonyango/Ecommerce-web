@@ -4,8 +4,8 @@ import colors from 'colors'
 // a mongoose stuf (mongoose.connect ....) return always a promise
 const connectDB = async () => {
     try{
-       
-        const conn = await mongose.connect("mongodb://127.0.0.1:27017/ecommerce",{
+        const DB = "mongodb+srv://felexonyango19:Felex2018@cluster0.lb24yna.mongodb.net/myFirstDatabase?retryWrites=true"
+        const conn = await mongose.connect(DB,{
             useUnifiedTopology: true,
             useNewUrlParser: true,
             useCreateIndex: true

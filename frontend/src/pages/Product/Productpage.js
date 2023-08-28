@@ -76,7 +76,7 @@ const submithanlder = () =>{
     return (
       <>
       <Helmet>
-      <title>{product.name}</title>
+      <title>{product?.name}</title>
       </Helmet>
         <div className = 'productpage'>
           {loading ?  <div className='loading-product'>
@@ -88,7 +88,7 @@ const submithanlder = () =>{
         <div className = "product-imgs">
         <div className = "img-display">
             <div ref={imgShowcase}  className = "img-showcase">
-              {product.images.map(i => (
+              {product?.images.map(i => (
               <Image src= {i} />  
               ))}
 
@@ -101,20 +101,20 @@ const submithanlder = () =>{
           <div className = "img-select">
             <div className = "img-item">
               <a href = "#" data-id = "1">
-                <Image  objectFit="cover" boxSize = '200px' src = {product.images[0]} alt = "shoe image"/>
+                <Image  objectFit="cover" boxSize = '200px' src = {product?.images[0]} alt = "shoe image"/>
 
 
               </a>
             </div>
             <div className = "img-item">
               <a href = "#" data-id = "2">
-                <Image  objectFit="cover" boxSize = '200px' src = {product.images[1]} alt = "shoe image"/>
+                <Image  objectFit="cover" boxSize = '200px' src = {product?.images[1]} alt = "shoe image"/>
 
               </a>
             </div>
             <div className = "img-item">
               <a href = "#" data-id = "3">
-                <Image  objectFit="cover"  boxSize = '200px' src = {product.images[2]} alt = "shoe image"/>
+                <Image  objectFit="cover"  boxSize = '200px' src = {product?.images[2]} alt = "shoe image"/>
 
 
               </a>
@@ -124,24 +124,24 @@ const submithanlder = () =>{
         </div>
  
         <div className = "product-content">
-          <h2 className = "product-title">{product.name} </h2>
+          <h2 className = "product-title">{product?.name} </h2>
           <Link to = '/shop' className = "product-link">visit our store</Link>
               <Rating
-              value={product.rating}
-              text={`${product.numReviews} reviews`}
+              value={product?.rating}
+              text={`${product?.numReviews} reviews`}
               />
           <div className = "product-price">
-            <p className = "last-price">Old Price: <span>${product.price + product.price * 0.5}</span></p>
-            <p className = "new-price">New Price: <span>${product.price} (5%)</span></p>
+            <p className = "last-price">Old Price: <span>${product?.price + product?.price * 0.5}</span></p>
+            <p className = "new-price">New Price: <span>${product?.price} (5%)</span></p>
           </div>
           
           <div className = "product-detail">
             <h2>about this item: </h2>
-            <p>{product.description}</p>
+            <p>{product?.description}</p>
            <div>
            <ul>
              <li>Size</li> <Select  className='select-product' placeholder="Choose an option">
-               {product.sizes.map(size =>(
+               {product?.sizes.map(size =>(
                                     <option value={size}>{size}</option>
 
                ))}
@@ -149,14 +149,14 @@ const submithanlder = () =>{
            </ul>
            </div>
             <ul>
-              <li>Status: <span>{product.countInStock > 0 ? 'ìn stock' :  'Out Of Stock'}</span></li>
-              <li>Category: <span>{product.category.map(cg =>' | ' + cg + ' | ')}</span></li>
+              <li>Status: <span>{product?.countInStock > 0 ? 'ìn stock' :  'Out Of Stock'}</span></li>
+              <li>Category: <span>{product?.category?.map(cg =>' | ' + cg + ' | ')}</span></li>
               <li>Shipping Area: <span>All over the world</span></li>
               <div>
                 <ul> <li>Qty :</li>
-             {product.countInStock > 0 ?
+             {product?.countInStock > 0 ?
               <Select as='select' size="md" maxW={20}  value={qty} className='select-product' onChange={(e) => setQty(e.target.value)} >
-                {[...Array(product.countInStock).keys()].map((x) => (              
+                {[...Array(product?.countInStock).keys()].map((x) => (              
                                     <option key={x+1} value={x+1}>
                                       {x+1}
                                     </option> ))}
@@ -173,7 +173,7 @@ const submithanlder = () =>{
           </div>
 
                <div className = "purchase-info">
-            <Button onClick={addToCartHandler} type = "button"  className = "btn-shop" disabled={product.countInStock === 0}> <AiFillShop size='24' />Add to Cart </Button>
+            <Button onClick={addToCartHandler} type = "button"  className = "btn-shop" disabled={product?.countInStock === 0}> <AiFillShop size='24' />Add to Cart </Button>
           </div>
 
           <div className = "social-links">
@@ -195,17 +195,17 @@ const submithanlder = () =>{
     }
       <div className ='REVIEWS'>
         <h1>Reviews :</h1>
-        {product.reviews.length === 0 && <h2>NO REVIEWS</h2>}
+        {product?.reviews?.length === 0 && <h2>NO REVIEWS</h2>}
         <div>
-          {product.reviews.map(review =>(
+          {product?.reviews.map(review =>(
             <div className='review'>
-              <h4>{review.name}</h4>
+              <h4>{review?.name}</h4>
               <div className = 'Ratingreview'>
-              <Rating value={review.rating}/>
+              <Rating value={review?.rating}/>
 
               </div>
-              <p className ='commentreview'>{review.comment}</p>
-              <p className ='datereview'>{review.createdAt.substring(0,10)}</p>
+              <p className ='commentreview'>{review?.comment}</p>
+              <p className ='datereview'>{review?.createdAt.substring(0,10)}</p>
 
             </div>
 
