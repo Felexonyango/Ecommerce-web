@@ -25,7 +25,7 @@ import Editproduct from './pages/Editproduct/Editproduct'
 import Orders from './pages/Orders/Orders'
 
 
- const App = () => { 
+ const App:React.FC = () => { 
   const  [loading,setLoading] = useState(false)
   useEffect(() => {
     setLoading(true)

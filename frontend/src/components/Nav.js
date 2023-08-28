@@ -17,7 +17,7 @@ import {logout} from '../actions/userActions'
 import { keyword } from 'color-convert'
 import Searchnav from './Searchnav';
 
- const Nav = ({history}) => {
+ const Nav = () => {
     const [incart,setincart] = useState(0);
     const cart = useSelector(state => state.cart)
     const {cartItems} = cart
