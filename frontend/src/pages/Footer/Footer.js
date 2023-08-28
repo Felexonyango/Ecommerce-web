@@ -1,5 +1,9 @@
 import React from 'react'
-import {FiFacebook, AiOutlineHeart, AiOutlineInstagram, IoLogoYoutube} from 'react-icons/all';
+import { FiFacebook } from 'react-icons/fi';
+import { AiOutlineHeart } from 'react-icons/ai';
+import { AiOutlineInstagram } from 'react-icons/ai';
+import { IoLogoYoutube } from 'react-icons/io';
+
 import { Input,Stack } from '@chakra-ui/react'
 import './footercss.css'
 import { Link } from 'react-router-dom';

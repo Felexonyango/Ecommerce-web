@@ -8,7 +8,7 @@ import wave from './img/wavev.png'
 import { Helmet } from 'react-helmet';
 import {getUserDetails, updateUserProfile} from '../actions/userActions'
 import {listMyOrders } from '../actions/orderActions'
-import { IoIosArrowDown } from 'react-icons/all';
+import { IoIosArrowDown } from 'react-icons/io';
 import HashLoader from "react-spinners/HashLoader";
 
 

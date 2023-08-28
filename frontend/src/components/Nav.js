@@ -3,7 +3,15 @@ import {useSelector, useDispatch} from 'react-redux'
 import { Route } from 'react-router-dom';
 import {Link, NavLink } from 'react-router-dom'
 import { Button, Input,InputGroup,InputRightElement, Menu, MenuButton, MenuItem, MenuList} from "@chakra-ui/react"
-import {RiShoppingCart2Line,IoCloseOutline,MdSearch,BsArrowRightShort,MdKeyboardArrowRight,IoLogOutOutline,CgProfile, IoChevronDownCircleOutline, IoMdArrowDropdown} from "react-icons/all"
+import { RiShoppingCart2Line } from 'react-icons/ri';
+import { IoCloseOutline } from 'react-icons/io5';
+import { MdSearch } from 'react-icons/md';
+import { BsArrowRightShort } from 'react-icons/bs';
+import { MdKeyboardArrowRight } from 'react-icons/md';
+import { IoLogOutOutline } from 'react-icons/io5';
+import { CgProfile } from 'react-icons/cg';
+import { IoChevronDownCircleOutline } from 'react-icons/io5';
+import { IoMdArrowDropdown } from 'react-icons/io';
 
 import {logout} from '../actions/userActions'
 import { keyword } from 'color-convert'

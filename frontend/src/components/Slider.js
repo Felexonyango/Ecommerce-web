@@ -1,5 +1,7 @@
 import {React,useEffect,useState}  from 'react'
-import {IoIosArrowForward,IoIosArrowBack} from 'react-icons/all'
+import { IoIosArrowForward } from 'react-icons/io';
+import { IoIosArrowBack } from 'react-icons/io';
+
 import { Link } from 'react-router-dom';
 import ShopNowBtn from './ShopNowBtn'
 const Slider = () => {

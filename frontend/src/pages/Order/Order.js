@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom'
 import { Helmet } from 'react-helmet';
 
 import {useDispatch, useSelector} from 'react-redux'
-import { IoMdDoneAll } from 'react-icons/all';
+import { IoMdDoneAll } from 'react-icons/io';
 import HashLoader from "react-spinners/HashLoader";
 import { getOrderDetails, payOrder,deliverOrder } from "../../actions/orderActions";
 import './Order.css'

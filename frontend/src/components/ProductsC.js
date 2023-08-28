@@ -2,7 +2,10 @@ import React,{useEffect,useState} from 'react'
 import { useDispatch,useSelector } from 'react-redux'
 import CardProduct from './CardProduct'
 import {listProducts,ListproductbyCg, Listproductbyfiter,Listproductbyprice} from '../actions/productActions'
-import {BsFilter,AiOutlineSearch,IoMdClose} from 'react-icons/all'
+import { BsFilter } from 'react-icons/bs';
+import { AiOutlineSearch } from 'react-icons/ai';
+import { IoMdClose } from 'react-icons/io';
+
 import Search from './Search';
 import {NumberInput,NumberInputField,FormLabel, Button, Stack, FormControl} from "@chakra-ui/react"
 import HashLoader from "react-spinners/HashLoader";

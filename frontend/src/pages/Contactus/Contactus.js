@@ -4,7 +4,10 @@ import { Helmet } from 'react-helmet';
 
 import cover from './cover.jpg'
 import { Input,InputGroup, InputLeftElement, Textarea,Button  } from "@chakra-ui/react"
-import {BsEnvelope, GiPositionMarker, HiOutlinePhone} from 'react-icons/all'
+import { BsEnvelope } from 'react-icons/bs';
+import { GiPositionMarker } from 'react-icons/gi';
+import { HiOutlinePhone } from 'react-icons/hi';
+
 import './contactuscss.css'
 const Contactus = () => {
     const [email, setemail] = useState('')

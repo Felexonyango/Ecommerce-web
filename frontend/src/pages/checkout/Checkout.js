@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import { Helmet } from 'react-helmet';
 import { Input, Stack, Select, Image, Link } from "@chakra-ui/react"
-import {RiShoppingCart2Line} from "react-icons/all"
+import { RiShoppingCart2Line } from 'react-icons/ri';
+
 import './checkout.css'
 import { saveAddressshipping,savepaymentmethod } from '../../actions/cartActions'
 import { useDispatch, useSelector } from 'react-redux'
