@@ -16,7 +16,7 @@ export const CreateOrder = (order) => async(dispatch, getState) => {
             }
         }
 
-        const {data} = await axios.post(`/api/orders`, order, config)
+        const {data} = await axios.post(`https://test-nine-xi-88.vercel.app/api/orders`, order, config)
         dispatch({
             type: ORDER_CREATE_SUCCESS,
             payload: data

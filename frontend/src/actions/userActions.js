@@ -14,7 +14,7 @@ const login = (email, password) => async(dispatch) => {
             }
         }
 
-        const {data} = await axios.post('/api/users/login', {email, password}, config)
+        const {data} = await axios.post('https://test-nine-xi-88.vercel.app/api/users/login', {email, password}, config)
         dispatch({
             type: USER_LOGIN_SUCCESS,
             payload: data
@@ -56,7 +56,7 @@ export const register = (name, email, password) => async(dispatch) => {
             }
         }
 
-        const {data} = await axios.post('/api/users', {name, email, password}, config)
+        const {data} = await axios.post('https://test-nine-xi-88.vercel.app/api/users', {name, email, password}, config)
         dispatch({
             type: USER_REGISTER_SUCCESS,
             payload: data
@@ -239,7 +239,7 @@ export const updateUser = (user) => async(dispatch, getState) => {
             }
         }
 
-        const {data} =  await axios.put(`/api/users/${user._id}`,user, config)
+        const {data} =  await axios.put(`https://test-nine-xi-88.vercel.app/api/users/${user._id}`,user, config)
         dispatch({
             type: USER_UPDATE_SUCCESS,
                 })
